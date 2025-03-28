@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/391827d54c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Whatsapp Webpages</title>
+  <script src="index.js"></script>
+  <script>
+
+  console.log("1");
+let content = document.getElementById('content');
+let btn1 = getElementById('btn');
+console.log("2");
+var eleId;
+
+function clicked(event){
+    console.log('clicked',event.target);
+        eleId = event.target;
+
+}
+function topShift(){
+    content.prepend(eleId);
+
+}
+btn1.addEventListener('click' , topShift)
+content.addEventListener('click' , clicked);
+</script>
+
+
+
+</head>
+<body>
+  <div class="background-green"></div>
+  
+ 
+  <div class="main-container">
+    <div class="left-container">
+      
+
+      <div class="header">
+        <div class="user-img">
+          <img class="dp" src="download.jpg" alt="">
+        </div>   
+        <div class="nav-icons">
+          <li><i class="fa-solid fa-users"></i></li>
+          <li><i class="fa-solid fa-message">
+ </i></li>
+          <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+        </div>
+      </div>
+      
+      
+
+      <div class="notif-box">
+        <i class="fa-solid fa-bell-slash"></i>
+        <div class="notif-text">
+             <p>Get Notified of New Messages</p>
+             <a href="#">Turn on Desktop Notifications </a>
+            </div>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      
+
+      <div class="search-container">
+        <div class="input"> 
+<i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search or start new chat   "></div>
+     <i class="fa-sharp fa-solid fa-bars-filter"></i>  
+      </div>
+      
+      
+   
+      <div class="chat-list">
+        <div class="chat-box">
+          <div class="img-box">
+            <img class="img-cover" src="logo1.jpg" alt="">
+          </div>
+          <div class="chat-details">
+            <div class="text-head">
+              <h4>Ritik</h4>
+              <p class="time unread">11:49</p>
+            </div>
+            <div class="text-message">
+              <p>“How are you?”</p>
+              <b>1</b>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+          <div class="img-box">
+            <img class="img-cover" src="logo.jpg" alt="">
+          </div>
+          <div class="chat-details">
+            <div class="text-head">
+              <h4>Vishal</h4>
+              <p class="time unread">10:49</p>
+            </div>
+            <div class="text-message">
+              <p>“I’ll be there.”</p>
+              <b>4</b>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+          <div class="img-box">
+            <img class="img-cover" src="img1.jpg" alt="">
+          </div>
+          <div class="chat-details">
+            <div class="text-head">
+              <h4>Sadik</h4>
+              <p class="time unread">09:49</p>
+            </div>
+            <div class="text-message">
+              <p>“Make somebody’s day.”</p>
+              <b>2</b>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+          <div class="img-box">
+            <img class="img-cover" src="sports.png" alt="">
+          </div>
+          <div class="chat-details">
+            <div class="text-head">
+              <h4>Rishabh</h4>
+              <p class="time">08:49</p>
+            </div>
+            <div class="text-message">
+              <p>“Dreams come true.”</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box active">
+          <div class="img-box">
+            <img class="img-cover" src="nature.jpg" alt="">
+          </div>
+          <div class="chat-details">
+            <div class="text-head">
+              <h4>Hardik</h4>
+              <p class="time">07:49</p>
+            </div>
+            <div class="text-message">
+              <p>Awesome! I'll start a vid..</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+          <div class="img-box">
+            <img class="img-cover" src="download.jpg" alt="">
+          </div>
+          <div class="chat-details">
+            <div class="text-head">
+              <h4>Rahul</h4>
+              <p class="time">06:49</p>
+            </div>
+            <div class="text-message">
+              <p>“Love, light, laughter.”</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+          <div class="img-box">
+            <img class="img-cover" src="logo1.jpg" alt="">
+          </div>
+          <div class="chat-details">
+            <div class="text-head">
+              <h4>Ronak</h4>
+              <p class="time unread">Yesterday</p>
+            </div>
+            <div class="text-message">
+              <p>“Happy”</p>
+              <b>2</b>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+          <div class="img-box">
+            <img class="img-cover" src="girl.png" alt="">
+          </div>
+          <div class="chat-details">
+            <div class="text-head">
+              <h4>Shivang</h4>
+              <p class="time">Yesterday</p>
+            </div>
+            <div class="text-message">
+              <p>“Now or never.”</p>
+            </div>
+          </div>
+        </div>     
+      </div> 
+      
+    </div>
+    
+
+    
+    
+    
+    <div class="right-container">
+
+      <div class="header">
+        <div class="img-text">
+          <div class="user-img">
+          <img class="dp" src="download.jpg" alt="">
+        </div>
+          <h4>Ritik<br><span>Online</span></h4>
+        </div>
+        <div class="nav-icons">
+          <li><i class="fa-solid fa-magnifying-glass"></i></li>
+          <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+        </div>
+      </div>
+    
+
+      <div class="chat-container">
+        <div class="message-box my-message">
+          <p>Hello<br><span>07:43</span></p>
+        </div>
+        <div class="message-box friend-message">
+          <p>Hii<br><span>07:45</span></p>
+        </div>
+        <div class="message-box friend-message">
+          <p>How r u><span>07:45</span></p>
+        </div>
+        <div class="message-box friend-message">
+          <p>I'm fine wbu!!<br><span>07:45</span></p>
+        </div>
+        <div class="message-box my-message">
+          <p>😐😐😐<br><span>07:46</span></p>
+        </div>
+        <div class="message-box my-message">
+          <p>Mee too! 😊<br><span>07:46</span></p>
+        </div>
+      <div class="message-box friend-message">
+          <p>Talk later!<br><span>07:48</span></p>
+        </div>
+        <div class="message-box my-message">
+          <p>Sure<br><span>07:48</span></p>
+        </div>
+        <div class="message-box my-message">
+          <p>I'm free now!<br><span>07:48</span></p>
+        </div>
+      <div class="message-box friend-message">
+          <p>Awesome !!.<br><span>07:49</span></p>
+        </div>      
+      </div>
+      
+
+      <div class="chatbox-input">
+        <i class="fa-regular fa-face-grin"></i>
+        <i class="fa-sharp fa-solid fa-paperclip"></i>
+        <input type="text" placeholder="Type a message">
+        <i class="fa-solid fa-microphone"></i>
+      </div>
+    </div>
+    
+  </div> 
+</body>
+</html>

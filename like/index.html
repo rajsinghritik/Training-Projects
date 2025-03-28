@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="post">
+        <p>This is a sample post content.</p>
+
+        <!-- Like, Dislike, and Comment Buttons -->
+        <div class="buttons">
+            <button id="likeBtn" onclick="toggleLike()">Like <span id="likeCount">0</span></button>
+            <button id="dislikeBtn" onclick="toggleDislike()">Dislike <span id="dislikeCount">0</span></button>
+            <button id="commentBtn" onclick="toggleCommentBox()">Comment</button>
+        </div>
+
+        <!-- Comment Section -->
+        <div id="commentBox" class="comment-box" style="display: none;">
+            <textarea id="commentText" placeholder="Add a comment..."></textarea>
+            <button onclick="submitComment()">Submit</button>
+        </div>
+
+        <div id="commentsList"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

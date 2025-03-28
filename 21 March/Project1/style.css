@@ -1,0 +1,15 @@
+
+.button {
+            margin: 20px;
+            padding: 10px;
+        }
+        .paragraph-container {
+            margin-top: 20px;
+        }
+
+*{
+    background-color: lightpink;
+    border-radius: 10vh;
+    align-content: center;
+}
+

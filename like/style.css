@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.post {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 300px;
+    text-align: center;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.comment-box {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#commentsList {
+    margin-top: 20px;
+}
+
+#commentsList p {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ddd;
+}

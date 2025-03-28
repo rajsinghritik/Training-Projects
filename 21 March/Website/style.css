@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+   box-sizing: border-box;
+   font-family: 'Poppins' , sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ccc;
+}
+.background-green{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #009688;
+}
+.min-container{
+    position: relative;
+    width: 1000px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background: #fff;
+    display: flex;
+    box-shadow: 0px 1px 1px 0 rgba(0, 0,0,5),0px 2px 5px 0 ;
+}
+.min-container .left-container{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    flex: 70%;
+    background: #e5ddd5;
+
+
+}
+.min-container .right-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://camo.githubusercontent.com/854a93c27d64274c4f8f5a0b6ec36ee1d053cfcd934eac6c63bed9eaef9764bd/68747470733a2f2f7765622e77686174736170702e636f6d2f696d672f62672d636861742d74696c652d6461726b5f61346265353132653731393562366237333364393131306234303866303735642e706e67);
+    opacity: 0.5;
+}
+.header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: #ededed;
+    padding: 0 15px;
+}
+.user-img{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.dp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.nav-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 110px;
+}
+.nav-icons li{
+    background-color: pink;
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    color: #51585c;
+    margin-left: 22px;
+    font-size: 18px;
+}
+.notif-box{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: #76daff;
+    align-items: center;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+. 

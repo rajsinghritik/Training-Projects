@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazy Load Images</title>
+  <script>
+    // Check if IntersectionObserver is supported
+if ('IntersectionObserver' in window) {
+    const lazyImages = document.querySelectorAll('img.lazy');
+  
+    const observerOptions = {
+      root: null,  // Use the viewport as the root
+      rootMargin: '0px',  // No margin
+      threshold: 0.1  // Trigger when 10% of the image is visible
+    };
+  
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // When the image is in the viewport, load it
+          const lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;  // Set the actual image source
+          lazyImage.classList.remove('lazy');  // Optionally remove lazy class
+          observer.unobserve(lazyImage);  // Stop observing this image
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    lazyImages.forEach(image => {
+      observer.observe(image);
+    });
+  } else {
+    // Fallback if IntersectionObserver is not supported
+    const lazyImages = document.querySelectorAll('img.lazy');
+    lazyImages.forEach(image => {
+      image.src = image.dataset.src;
+    });
+  }
+  
+  </script>
+</head>
+<body>
+  <h1>Lazy Loading 
+    
+  </h1>
+
+  <img class="lazy" src="profile-13.jpg" alt="1">
+  <img class="lazy" src="profile-19.jpg" alt="2">
+  <img class="lazy" src="profile-9.jpg" alt="3">
+
+  
+
+ 
+</body>
+</html>

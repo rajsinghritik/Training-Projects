@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><center><i><b>Like/Unlike Posts</b></i></center></title>
+    <fieldset>
+        <h1><i><b><center>Like & Unlike Btn !!!</center></b></i></h1>
+    </fieldset>
+    <style>
+        fieldset{
+            background-color: lightsalmon;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: border-box;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+           
+            color: #28a745;
+        }
+
+        .post-container {
+            width: 1500px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 500px;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        .post {
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post:last-child {
+            border-bottom: none;
+        }
+
+        .like-btn {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .liked {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .unliked {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .post p {
+            margin: 0;
+        }
+
+        .load-more-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .load-more-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .btn{
+            
+        }
+    </style>
+</head>
+<body>
+
+<div class="post-container" id="postContainer">
+    <div class="post">
+        <p><b>Post 1</b></p>
+        <img src="story-5.jpg" alt="Post1">
+        <button class="like-btn">Like</button>
+    </div>
+    <div class="post">
+        <p>Post 2</p>
+        <img src="profile-19.jpg" alt="Post2">
+        <button class="like-btn">Like</button>
+    </div>
+    <div class="post">
+
+        <p>Post 3</p>
+        <img src="story-5.jpg" alt="Post3">
+        <button class="like-btn">Like</button>
+        <div class="post">
+
+            <p>Post 3</p>
+            <img src="social logo.png" alt="Post4">
+            <button class="like-btn">Like</button>
+        </div>
+        <div class="post">
+
+            <p>Post 3</p>
+            <img src="profile-19.jpg" alt="Post5">
+            <button class="like-btn">Like</button>
+        </div>
+        <div class="post">
+
+            <p>Post 3</p>
+            <img src="profile-13.jpg" alt="Post6">
+            <button class="like-btn">Like</button>
+        </div>
+    </div>
+
+    <div class="post">
+
+        <p>Post 3</p>
+        <img src="feed-2.jpg" alt="Post3">
+        <button class="like-btn">Like</button>
+    </div>
+</div>
+
+
+<button class="load-more-btn" id="loadMoreBtn">Load More</button>
+
+<script>
+    
+    function toggleLike(status) {
+        const posts = document.querySelectorAll('.post');
+
+        posts.forEach(post => {
+            const button = post.querySelector('.like-btn');
+
+            if (status === 'liked') {
+                button.textContent = 'Unlike';
+                button.classList.add('liked');
+                button.classList.remove('unliked');
+            } else {
+                button.textContent = 'Like';
+                button.classList.add('unliked');
+                button.classList.remove('liked');
+            }
+        });
+    }
+
+    
+    const buttons = document.querySelectorAll('.like-btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (button.textContent === 'Like') {
+                toggleLike('liked');
+            } else {
+                toggleLike('unliked');
+            }
+        });
+    });
+
+   
+    let postCount = 3;  
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const postContainer = document.getElementById('postContainer');
+
+    loadMoreBtn.addEventListener('click', function() {
+        
+        for (let i = postCount + 1; i <= postCount + 3; i++) {
+            const postDiv = document.createElement('div');
+            postDiv.classList.add('post');
+            postDiv.innerHTML = `
+                <p>Post ${i}</p>
+                <button class="like-btn">Like</button>
+            `;
+            postContainer.appendChild(postDiv);
+        }
+
+       
+        postCount += 3;
+
+        
+        const buttons = document.querySelectorAll('.like-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                if (button.textContent === 'Like') {
+                    toggleLike('liked');
+                } else {
+                    toggleLike('unliked');
+                }
+            });
+        });
+
+       
+        if (postCount >= 10) {
+            loadMoreBtn.disabled = true;
+            loadMoreBtn.textContent = "No More Posts";
+        }
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

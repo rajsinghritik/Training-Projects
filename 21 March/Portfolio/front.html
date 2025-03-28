@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Responsive Blogs</title>
+  
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#">
+        <h1 class="logo"><b><i></i></b></h1>
+        <img src="img6.png" alt="RCV">
+      </a>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
+        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" class="close-icon"></ion-icon>
+      </button>
+
+      <nav class="navbar container">
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li>
+            <a href="#portfolio" class="navbar-link" data-nav-link>Webpages</a>
+          </li>
+
+          <li>
+            <a href="#skills" class="navbar-link" data-nav-link>Pages</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+          <li>
+            <a href="#" class="btn btn-primary">Welcome</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <div class="hero-banner">
+
+            <img src="ritik.jpg" width="800" height="864" loading="lazy" alt="" class="img-cover">
+
+            <div class="elem elem-1">
+              <p class="elem-title">Fresher</p>
+
+              <p class="elem-text">1</p>
+            </div>
+
+            <div class="elem elem-2">
+              <p class="elem-title"></p>
+
+              <p class="elem-text">Welcome To Pages</p>
+            </div>
+
+          </div>
+
+          <div class="hero-content">
+
+            <h2 class="hero-title">
+              <span>Hello, I'm</span>
+              <strong>Ritik</strong> Welcome to Webpages
+            </h2>
+
+            <p class="hero-text">
+              <b><i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, iure.</i></b>
+            </p>
+
+            <div class="btn-group">
+              <a href="#contact" class="btn btn-primary blue">About Us</a>
+
+              <a href="#about" class="btn">About Me</a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container">
+
+          <figure class="about-banner">
+
+            <img src="download.jpg" width="800" height="652" loading="lazy" alt="a's Photo" class="img-cover">
+
+            
+
+            <div class="abs-icon abs-icon-1">
+              <ion-icon name="logo-css3"></ion-icon>
+            </div>
+
+            <div class="abs-icon abs-icon-2">
+              <ion-icon name="logo-javascript"></ion-icon>
+            </div>
+
+            <div class="abs-icon abs-icon-3">
+              <ion-icon name="logo-react"></ion-icon>
+            </div>
+
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle"><i>Lorem ipsum dolor sit amet.</i></p>
+
+            <h2 class="h2 section-title"><b>Lorem ipsum dolor sit amet.</b></h2>
+
+            <p class="section-text">
+              <b>Lorem ipsum dolor sit amet consectetur.</b>
+            </p>
+
+            <p class="section-text">
+              <b><i>Lorem ipsum dolor sit amet.</i></b>
+            </p>
+
+            <a href="#portfolio" class="btn btn-primary blue">Blog's</a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section portfolio" id="portfolio">
+        <div class="container">
+
+          <p class="section-subtitle">Portfolio</p>
+
+          <h2 class="h2 section-title"><b><i>Lorem ipsum dolor sit.</i></b></h2>
+
+          <p class="section-text">
+            <b>Lorem ipsum dolor sit amet.</b>
+          </p>
+
+          <ul class="portfolio-list">
+
+            
+
+            <li>
+              <a href="#" class="portfolio-card" style="background-image: url('img\ 2.jpg')">
+                <div class="card-content">
+                    
+
+
+                  <h3 class="h3 card-title">Blog's</h3>
+
+                  <span class="btn-link">
+                    <span>Blog's</span>
+
+                   
+                  </span>
+
+
+                  <div class="post">
+                    
+            
+                    
+                    <div class="buttons">
+                     
+                        <button id="likeBtn" onclick="toggleLike()"><b>Like</b></button> <span id="likeCount">0</span></button>
+                        <button id="dislikeBtn" onclick="toggleDislike()"><b>Dislike</b> <span id="dislikeCount">0</span></button>
+                        <button id="commentBtn" onclick="toggleCommentBox()"><b>Comments</b></button>
+                    </div>
+            
+                    
+                    <div id="commentBox" class="comment-box" style="display: none;">
+                        <textarea id="commentText" placeholder="Add a comment..."></textarea>
+                        <button onclick="submitComment()">Submit</button>
+                    </div>
+            
+                    <div id="commentsList"></div>
+                </div>
+
+
+
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="portfolio-card" style="background-image: url('img.jpg')">
+                <div class="card-content">
+
+                  <p class="card-subtitle">Blog's</p>
+
+                  <h3 class="h3 card-title">Blog's</h3>
+
+                  <span class="btn-link">
+                    <span>Blog's</span>
+
+                   
+                  </span>
+
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="portfolio-card" style="background-image: url('img4.jpg')">
+                <div class="card-content">
+
+                  <p class="card-subtitle">RCV PROJECT</p>
+
+                  <h3 class="h3 card-title">RCV PROJECT</h3>
+
+                  <span class="btn-link">
+                    <span>Blog's</span>
+
+                   
+                  </span>
+
+                </div>    
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="portfolio-card" style="background-image: url('p1.jpg')">
+                <div class="card-content">
+
+                  <p class="card-subtitle">Blog's</p>
+
+                  <h3 class="h3 card-title">Blog's</h3>
+
+                  <span class="btn-link">
+                    <span>Blog's</span>
+
+                   <!--- <ion-icon name="arrow-forward"></ion-icon> -->
+                  </span>
+
+                </div>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="container">
+
+          <p class="section-subtitle"><b>LOREM</b></p>
+
+          <h2 class="h2 section-title"><b>Lorem ipsum dolor sit amet.</b></h2>
+
+          <p class="section-text">
+            <i>Lorem ipsum dolor sit amet consectetur.</i> 
+          </p>
+
+         
+
+        </div>
+      </section>
+
+
+      <section class="section contact" id="contact">
+        <div class="container">
+
+          <div class="contact-card">
+
+            <p class="card-subtitle">Contact Ritik !</p>
+
+            <h2 class="h2 section-title">Drop Me a Line</h2>
+
+            <div class="wrapper">
+
+              <form action="" class="contact-form">
+
+                <input type="text" name="name" placeholder="Name" required class="contact-input">
+
+                <input type="email" name="email" placeholder="Email" required class="contact-input">
+
+                <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+
+              </form>
+
+              <ul class="contact-list">
+
+                <li class="contact-item">
+
+                  <div class="contact-icon">
+                    <ion-icon name="location"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="contact-item-title">Address</h3>
+
+                    <address class="contact-item-link">
+                      India
+                    </address>
+                  </div>
+
+                </li>
+
+                <li class="contact-item">
+
+                  <div class="contact-icon">
+                    <ion-icon name="mail"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="contact-item-title">Email</h3>
+
+                    <a href="#" class="contact-item-link">*****</a>
+                  </div>
+
+                </li>
+
+                <li class="contact-item">
+
+                  <div class="contact-icon">
+                    <ion-icon name="call"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="contact-item-title">Phone</h3>
+
+                    <a href="#" class="contact-item-link">**********</a>
+                  </div>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+
+      <p class="copyright">
+        &copy; <a href="#" class="copyright-link">Ritik</a>.
+      </p>
+
+      <ul class="footer-list">
+        <li>
+          <a href="#" class="footer-link">Terms & Condition</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+      </ul>
+
+    </div>
+  </footer>
+
+
+  <!--<a href="#top" class="back-to-top" data-back-to-top>BACK TO TOP</a> -->
+
+  <Script src="index.js"></Script>
+
+</body>
+
+</html>
